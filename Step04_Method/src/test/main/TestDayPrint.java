@@ -9,6 +9,7 @@ public class TestDayPrint {
 		int rest_day = td1.d_day();
 		System.out.println(rest_day);
 		System.out.println(td1.Lucky());
+		System.out.println(rest_day);
 
 	}
 
