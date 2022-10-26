@@ -14,6 +14,8 @@ public class Student {
 	 * public Student(){ }
 	 * 위가 기본 생성자이다. 기본 생성자를 생성하지 않더라도 다른 class파일에서
 	 * Student s1 = new Student(); 이런식으로 불러올 수 있다.
+	 * 하지만 생성자를 매개변수를 이용해 정의한다면(ex. public Student(int num, String name){ }) 기본 생성자가 사라진다.
+	 * 그러므로 만약 정의도 하고 기본도 가지고 싶으면 둘 다 선언해야 한다.(overloading해야한다는 뜻)
 	 */
 
 	public Student() {

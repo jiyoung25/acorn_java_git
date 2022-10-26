@@ -33,6 +33,7 @@ public class MainClass01 {
 		
 		//문자를 숫자로 바꾸기(String type을 int type으로 바꾼 결과값 얻어내기)
 		int result4 = Integer.parseInt("999");//Interger class의 static 메소드 활용
+		System.out.println(result4);
 	}
 
 }

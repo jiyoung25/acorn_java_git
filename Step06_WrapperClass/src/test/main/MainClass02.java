@@ -14,8 +14,7 @@ public class MainClass02 {
 		 double result2=num1+num2;
 		 Double result3=num1+num2;
 
-		 String 꺄;
-		double result4=Double.parseDouble("1");
+		double result4=Double.parseDouble("1.1");
 		System.out.println(result4);
 	}
 }

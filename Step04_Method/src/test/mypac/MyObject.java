@@ -46,6 +46,7 @@ public class MyObject {
 		System.out.println("무언가를 작업합니다.");
 	}
 	
+	//overloading send();
 	public void send() {
 		System.out.println("무언가를 전송해요");
 	}
