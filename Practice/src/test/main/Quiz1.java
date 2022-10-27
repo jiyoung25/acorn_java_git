@@ -17,11 +17,14 @@ public class Quiz1 {
 		Random random=new Random();
 
 		int nums[]= {0,0,0};
+		
+		//이 부분을
 		for (int i=0; i<3; i++){
 		int ranNum=random.nextInt(0,5);
 		nums[i]=ranNum;
 		}
 		
+		//여기에 넣어도 결과는 똑같다.
 		for (int i=0; i<nums.length; i++) {
 		System.out.print(str[nums[i]]+"|");
 		}
