@@ -6,7 +6,9 @@ public class Bike extends Vehicles {
 	public String time;
 	public int num;
 	
-	public Bike() {
+	public Bike(Electric electric, Power power, Part part) {
+		
+		super(electric, power, part);
 		System.out.println("Bike생성자 호출됨");
 	}
 	

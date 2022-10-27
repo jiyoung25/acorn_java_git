@@ -5,7 +5,9 @@ public class Car extends Vehicles{
 	int num1;
 	int num2;
 	
-	public Car() {
+	public Car(Electric electric, Power power, Part part) {
+		
+		super(electric, power, part);
 		System.out.println("Car생성자 호출됨");
 	}
 	

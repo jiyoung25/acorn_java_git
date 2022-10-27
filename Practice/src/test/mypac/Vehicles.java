@@ -5,8 +5,8 @@ public class Vehicles {
 	private Bike bike;
 	private Car car;
 	
-	public Vehicles() {
-		System.out.println("Vehicles기본생성자 호출");
+	public Vehicles(Electric electric, Power power, Part part) {
+		System.out.println("Vehicles 냥냥이 생성자 호출");
 	}
 	
 	public Vehicles(Bike bike, Car car) {

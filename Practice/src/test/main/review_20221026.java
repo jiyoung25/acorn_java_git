@@ -1,11 +1,17 @@
 package test.main;
 
 import java.util.Scanner;
-
 import test.mypac.Bike;
+import test.mypac.Electric;
+import test.mypac.Power;
+import test.mypac.Part;
 
 public class review_20221026 {
 	public static void main(String[] args) {
+		Electric electric=new Electric();
+		Power power=new Power();
+		Part part=new Part();
+		
 		int[] nums = { 10, 20, 30, 40, 50 };
 		int[] cloned = nums.clone();
 		int[] copied = nums;
@@ -28,7 +34,7 @@ public class review_20221026 {
 
 		Bike[] bikes = new Bike[3];
 		for (int i = 0; i < bikes.length; i++) {
-			bikes[i] = new Bike();
+			bikes[i] = new Bike(electric, power, part);
 		}
 
 		for (Bike tmp : bikes) {

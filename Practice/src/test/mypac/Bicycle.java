@@ -5,8 +5,11 @@ public class Bicycle extends Bike {
 	public int num;
 	public int name;
 	
-	public Bicycle() {
+	public Bicycle(Electric electric, Power power, Part part) {
+		
+		super(electric, power, part);
 		System.out.println("Bicycle 생성자 호출됨");
+		
 	}
 	
 	public void bikeRider() {
