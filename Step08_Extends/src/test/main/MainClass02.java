@@ -22,6 +22,7 @@ public class MainClass02 {
 		Phone p2=new HandPhone(); //새로운 자식타입을 만들면서 부모타입으로 받을 수 있다.
 		
 		Object p3=new HandPhone(); //Object type은 모든 타입의 조상님이다.
+		//p3에는 HandPhone라는 객체가 있지만, 이 안에 HandPhone의 기능은 없고 Object의 기능만 있다. 
 		//한 객체는 다양한 타입일 수 있따! 더 큰 범위범위범위
 		
 		//p1.call();은 됨. 자식은 부모의 것을 사용할 수 있다.

@@ -3,7 +3,7 @@ package test.auto;
 /*
  *  - 접근지정자 접근범위
  *  public: 어디에서나 접근 가능
- *  protected: 동일한 package 혹은 상속관계에서 자식에서 접근 가능
+ *  protected: 동일한 package 혹은 상속관계에서 자식에서 접근 가능 //package가 달라도 상속관계면 접근 가능
  *  default: 동일한 package안에서만 접근 가능
  *  private: 동일한 클래스 혹은 동일한 객체 안에서만 접근 가능
  *  

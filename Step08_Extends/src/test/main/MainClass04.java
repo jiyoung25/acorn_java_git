@@ -17,6 +17,9 @@ public class MainClass04 {
 		HandPhone p1=(HandPhone)p3;//위와 동일 "야 이거 까보니까 HandPhone type이 확실해!! 다른 기능 없더라!! 그냥 담아! 내가 책임질게!"라는 뜻
 		
 		
+		Object p4=new Object();
+		HandPhone p5 = (HandPhone)p4;  //부모Class의 객체여도 자식 클래스에 캐스팅해 받을 수 있음(but, 오류 가능성 증가증가증가)
+		
 		//왜 casting을 하느냐? 부모 type이 더 유연한 코딩이 가능! 부모 type으로 하다가 나중에 범위 좁히기 위해 casting을 하곤 한다.
 	}
 

@@ -8,6 +8,4 @@ public class MachineReal {
 	public static void main(String[] args) {
 		Machine m1=new Machine(new Electric(),new Part(),new Power());
 	}
-
-
 }
