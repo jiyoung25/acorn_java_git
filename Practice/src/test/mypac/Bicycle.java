@@ -1,9 +1,9 @@
 package test.mypac;
 
-public class Bicycle extends Bike {
+public abstract class Bicycle extends Bike {
 	
 	public int num;
-	public int name;
+	public String name;
 	
 	public Bicycle(Electric electric, Power power, Part part) {
 		
@@ -12,7 +12,11 @@ public class Bicycle extends Bike {
 		
 	}
 	
+	public abstract void prepareBike(String name);
+	
 	public void bikeRider() {
+		
+		this.name=name;
 		System.out.println(num+"개의 자전거를 가진 "+name);
 	}
 	

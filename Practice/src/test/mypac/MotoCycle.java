@@ -12,6 +12,7 @@ public class MotoCycle extends Bike {
 	public void accident() {
 		System.out.println("사고가 났습니다.");
 	}
+	
 
 
 }
