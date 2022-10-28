@@ -1,5 +1,7 @@
 package test.main;
 
+import java.util.ArrayList;
+import java.util.List;
 import test.mypac.Drill;
 
 public class MainClass04 {
@@ -15,6 +17,9 @@ public class MainClass04 {
 				System.out.println("천장에 구멍을 뚫어요.");
 		});
 	}
+	
+	List list=new ArrayList();
+	
 	
 	public static void useDrill(Drill d) {
 		d.hole();

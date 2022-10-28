@@ -14,10 +14,10 @@ public class review_20221028 {
 		
 		sj.num=1;
 		
-		sj.subject(3);
-		sj.Java(0);
-		sa.subject(0);
-		sa.Java(0);
+		sj.subject(sj.num);
+		sj.Java(3);
+		sa.subject(sj.num);
+		sa.Java(sa.num);
 		
 	}
 
