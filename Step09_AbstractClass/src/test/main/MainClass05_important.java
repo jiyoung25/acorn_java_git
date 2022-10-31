@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import test.mypac.Weapon;
 
-public class MainClass05 {
+public class MainClass05_important {
 
 	// 필드를 선언하면서 값을 대입하는 코드
 	int num = 999;
