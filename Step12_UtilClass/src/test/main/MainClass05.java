@@ -38,7 +38,7 @@ public class MainClass05 {
 		mem.forEach((t)->System.out.println("번호: "+t.num+", 이름: "+t.name+",주소: "+t.addr));
 		
 		System.out.println("4-3-2");
-		//<>에 Genetic Class 필수. 그래야 public void accept( )부분에서 Member type의 매개변수를 지정할 수 있다.
+		//<>에 Generic Class 필수. 그래야 public void accept( )부분에서 Member type의 매개변수를 지정할 수 있다.
 		mem.forEach(new Consumer<Member>() {
 			public void accept(Member t) {
 				System.out.println("번호: "+t.num+", 이름: "+t.name+",주소: "+t.addr);
