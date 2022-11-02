@@ -12,7 +12,9 @@ public class MyFrame extends JFrame {
 		this.setBounds(100/*x좌표*/, 100/*y좌표*/, 500/*폭*/, 500/*높이*/);
 		//x버튼(close버튼)을 눌렀을 때 프로세스도 같이 종료되도록 설정
 		//이 설정이 없다면 x버튼을 눌렀을 때 화면엔 없지만 프로세스는 돌아가는 상황 발생
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//EXIT_ON_CLOSE는 상수이다.
+		//그러므로 아래의 식에서 ( ) 안에 있는 값 말고 3을 너넣어도 효과가 나타난다
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
 		//레이아웃 매니저는 아직 사용하지 않겠도다! (모든 UI를 절대 좌표에 배치하겠도다)
 		this.setLayout(null);
 		
