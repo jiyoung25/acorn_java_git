@@ -14,6 +14,7 @@ public class review221102 {
 	public static void rr(){
 		try {
 			divide(num1,num2);
+			System.out.println(divide(num1,num2));
 		} catch(Exception e) {
 			System.out.println("제대로 된 숫자로 나눠라.");
 		} finally {

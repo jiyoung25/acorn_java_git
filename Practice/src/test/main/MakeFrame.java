@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class MakeFrame extends JFrame implements ActionListener{
-	JButton ebtn=new JButton("이벤트 버튼");
+	JButton ebtn;
 	static Integer a;
 	
 	public void actionPerformed(ActionEvent e) {
@@ -26,6 +26,9 @@ public class MakeFrame extends JFrame implements ActionListener{
 		this.setVisible(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
+		ebtn=new JButton("이벤트 버튼");
+		ebtn.setSize(100, 100);
+		ebtn.setBackground(getForeground().yellow);
 		add(ebtn);
 		ebtn.addActionListener(this);
 		
