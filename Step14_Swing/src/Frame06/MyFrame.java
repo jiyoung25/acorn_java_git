@@ -60,6 +60,8 @@ public class MyFrame extends JFrame implements ActionListener{
 		//e.getActionCommand()
 		//e.getSource() : 액션이 일어난 UI의 참조값을 얻을 수 있다.
 		//e.getID()
+		System.out.println(e.getID());
+		System.out.println(e.getActionCommand());
 
 
 	}

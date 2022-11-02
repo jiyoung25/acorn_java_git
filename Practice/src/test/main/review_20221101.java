@@ -57,7 +57,7 @@ public class review_20221101 {
 		//HashSet 정렬방법 6. stream()이용
 		//HashSet에 Collection interface가 내장되어있고, Collection 안에 stream()메소드가 내장되어있으므로 또다른 import필요없음
 		System.out.println("---------6----------");
-		System.out.println(animal.stream().sorted());
+		System.out.println(animal.stream().sorted().toString().valueOf(animal));
 		//위의 sorted 이후로 3,4,5 이용하면 정렬된 HashSet 값을 얻을 수 있다.
 	}
 }

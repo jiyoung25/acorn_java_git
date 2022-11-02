@@ -16,7 +16,7 @@ public class AmazingGUI extends JFrame {
 		this.setBackground(getForeground().red);
 		
 		JButton btn= new JButton("꺄오 버튼");
-		btn.setBackground(getForeground().blue);
+		btn.setBackground(getForeground().YELLOW);
 		btn.setCursor(getCursor().getPredefinedCursor(MOVE_CURSOR));
 		btn.setSize(500, 50);
 		
@@ -25,7 +25,7 @@ public class AmazingGUI extends JFrame {
 		this.setVisible(true);
 	}
 	public static void main(String[] args) {
-		new AmazingGUI("신기해");
+		new AmazingGUI("신기해~~!!");
 	}
 	
 	
