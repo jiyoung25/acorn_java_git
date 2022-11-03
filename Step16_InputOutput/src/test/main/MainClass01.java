@@ -1,4 +1,8 @@
 package test.main;
+
+import java.io.IOException;
+import java.io.InputStream;
+
 /*
  * 입력, 출력(Input, Output)
  * 
@@ -12,7 +16,17 @@ package test.main;
 
 public class MainClass01 {
 	public static void main(String[] args) {
-		
+		//IntStream객체는 1byte단위 처리 스트림이다. (그러므로 256가지 코드가 존재함)
+		//영문자, 대소문자, 숫자, 특수문자만 처리 가능 (한글 처리 불가)
+		InputStream kbd = System.in;
+		try {
+			int code = kbd.read(); //char을 읽을 수 있다. 읽어내는 것은 char의 code값
+			System.out.println("code: " + code);
+			char ch=(char)code;
+			System.out.println("char: "+ch);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-	
+
 }
