@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.Thread.UncaughtExceptionHandler;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,7 +15,7 @@ import javax.swing.JTextField;
 
 import com.sun.tools.javac.Main;
 
-public class MyFrame extends JFrame {
+public class MyFrame extends JFrame implements UncaughtExceptionHandler {
 	// 필드
 	JTextField tf_num1, tf_num2;
 	JLabel label_result;
@@ -101,5 +102,11 @@ public class MyFrame extends JFrame {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBounds(100, 100, 500, 500);
 		frame.setVisible(true);
+	}
+
+
+
+	public void uncaughtException(Thread t, Throwable e) {
+		   JOptionPane.showMessageDialog(MyFrame.this, "숫자를 입력해주세요.");
 	}
 }

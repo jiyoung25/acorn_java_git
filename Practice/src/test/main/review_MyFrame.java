@@ -1,4 +1,4 @@
-package frame11;
+package test.main;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -12,13 +12,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class MyFrame_T extends JFrame implements ActionListener {
+public class review_MyFrame extends JFrame implements ActionListener {
 	// 필드
 	JTextField tf_num1, tf_num2;
 	JLabel label_result;
+	JButton plusBtn;
+	JButton minusBtn;
+	JButton multiBtn;
+	JButton divideBtn;
 
 	// default 생성자
-	public MyFrame_T() {
+	public review_MyFrame() {
 		// 프레임의 레이아웃 법칙 설정하기
 		setLayout(new BorderLayout());
 
@@ -32,10 +36,10 @@ public class MyFrame_T extends JFrame implements ActionListener {
 		JTextField tf_num1 = new JTextField(10);
 		topPanel.add(tf_num1);
 		// 기능 버튼 객체를 만들어서 JPanel 에 추가하기
-		JButton plusBtn = new JButton("+");
-		JButton minusBtn = new JButton("-");
-		JButton multiBtn = new JButton("*");
-		JButton divideBtn = new JButton("/");
+		plusBtn = new JButton("+");
+		minusBtn = new JButton("-");
+		multiBtn = new JButton("*");
+		divideBtn = new JButton("/");
 		topPanel.add(plusBtn);
 		topPanel.add(minusBtn);
 		topPanel.add(multiBtn);
@@ -59,9 +63,9 @@ public class MyFrame_T extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
 		// MyFrame 클래스를 이용해서 객체 생성하고 참조값을 지역변수 frame 에 담기
-		MyFrame_T frame = new MyFrame_T();
+		review_MyFrame frame = new review_MyFrame();
 		// 프레임의 제목 설정
-		frame.setTitle("계산기2");
+		frame.setTitle("계산기1");
 		// 프레임을 닫으면 자동으로 프로세스가 종료 되도록 한다.
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBounds(100, 100, 500, 500);
@@ -70,29 +74,24 @@ public class MyFrame_T extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		try {
-		double num1 = Double.parseDouble(tf_num1.getText());
-		double num2 = Double.parseDouble(tf_num2.getText());
-		double result = 0;
 
-		String command = e.getActionCommand();
-		if (command.equals("+")) {
-			result = num1 + num2;
-		} else if (command.equals("-")) {
-			result = num1 - num2;
-		} else if (command.equals("*")) {
-			result = num1 * num2;
-		} else if (command.equals("/")) {
-			result = num1 / num2;
-		}
+		//try {
+			double num1 = Double.parseDouble(tf_num1.getText());
+			double num2 = Double.parseDouble(tf_num2.getText());
 
-		label_result.setText(Double.toString(result));
-		} catch(Exception a) {
-			JOptionPane.showMessageDialog(this, "숫자를 입력해주세요.");
-			tf_num1.setText("");
-			tf_num2.setText("");
-		}
+			String command = e.getActionCommand();
+			if (command.equals("+")) {
+				label_result.setText(Double.toString(num1 + num2));
+			} else if (command.equals("-")) {
+				label_result.setText(Double.toString(num1 - num2));
+			} else if (command.equals("*")) {
+				label_result.setText(Double.toString(num1 * num2));
+			} else if (command.equals("/")) {
+				label_result.setText(Double.toString(num1 / num2));
+			}
+	//	} catch (Exception a) {
+	//		JOptionPane.showMessageDialog(this, "숫자를 입력해주세요.");
+	//	}
 
 	}
 }

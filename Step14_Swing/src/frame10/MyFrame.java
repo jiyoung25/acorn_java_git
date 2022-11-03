@@ -3,12 +3,13 @@ package frame10;
 import java.awt.FlowLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.lang.Thread.UncaughtExceptionHandler;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class MyFrame extends JFrame {
+public class MyFrame extends JFrame implements UncaughtExceptionHandler {
 	// 생성자
 	public MyFrame(String title) {
 		super(title); // frame의 제목을 정해준다.
@@ -61,5 +62,10 @@ public class MyFrame extends JFrame {
 
 	public static void main(String[] args) {
 		new MyFrame("나의 프레임10");
+	}
+
+
+	public void uncaughtException(Thread t, Throwable e) {
+		
 	}
 }

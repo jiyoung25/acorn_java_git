@@ -1,6 +1,6 @@
 package test.main;
 
-public class review221102 {
+public class review_221102 {
 	
 	static int num1;
 	static int num2;
