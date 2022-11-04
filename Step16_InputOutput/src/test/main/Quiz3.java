@@ -27,6 +27,7 @@ public class Quiz3 extends JFrame implements ActionListener {
 
 	JButton addBtn, callBtn;
 	JTextField text;
+	String nameAdd, nameCall;
 	
 	public Quiz3(String title) {
 		super(title);
@@ -39,10 +40,12 @@ public class Quiz3 extends JFrame implements ActionListener {
 		
 		addBtn=new JButton("추가");
 		this.add(addBtn);
+		nameAdd=addBtn.getName();
 		addBtn.addActionListener(this);
 		
 		callBtn=new JButton("불러오기");
 		this.add(callBtn);
+		nameCall=callBtn.getName();
 		callBtn.addActionListener(this);
 
 		
@@ -79,8 +82,9 @@ public class Quiz3 extends JFrame implements ActionListener {
 				fw.flush();
 				fw.close();
 			} else if(gs.equals(callBtn)) {
+				String line=br.readLine();
+				long num=line.lines().count();
 				while(true) {
-					String line=br.readLine();
 					if(line==null) {
 						break;
 					} else {

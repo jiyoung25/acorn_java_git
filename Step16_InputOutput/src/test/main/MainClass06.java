@@ -25,6 +25,8 @@ public class MainClass06 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		BufferedWriter bw2= new BufferedWriter(new OutputStreamWriter(System.out));
 	}
 
 } 
