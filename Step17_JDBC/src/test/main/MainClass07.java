@@ -14,8 +14,8 @@ import test.util.DBConnect;
 public class MainClass07 {
 	public static void main(String[] args) {
 		// 추가할 회원의 정보
-		String name = "주뎅이";
-		String addr = "봉천동";
+		String name = "이지현";
+		String addr = "화성시";
 		//추가할 회원의 정보를 Member객체에 담기
 		Member mem=new Member();
 		//객체의 필드가 public 공개 필드이기 때문에 대입연산자로 직접 참조해서 필드에 값을 대입할 수 있다.
