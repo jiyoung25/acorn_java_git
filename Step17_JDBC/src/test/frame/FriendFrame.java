@@ -11,12 +11,15 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import test.dao.FriendDao;
+import test.dao.MemberDao;
 import test.dto.FriendDto;
+import test.dto.MemberDto;
 
 /*
  * 친구 정보를 저장할 테이블을 만들어보세요.
@@ -79,6 +82,9 @@ public class FriendFrame extends JFrame {
 		
 		table=new JTable();
 		model=new DefaultTableModel(column_name,0);
+		table.setModel(model);
+		JScrollPane scroll = new JScrollPane(table);
+		add(scroll, BorderLayout.CENTER);
 		
 		panel.add(label1);
 		panel.add(text1);
@@ -97,12 +103,17 @@ public class FriendFrame extends JFrame {
 		setVisible(true);
 		
 	}
+	public void displayMember() {
+		model.setRowCount(0);
+		
+		List<FriendDto> friendList = new FriendDao().friendList();
+		for(FriendDto tmp:friendList) {
+			Object[] row= {tmp.getNum(), tmp.getName(), tmp.getPhone(), tmp.getBirth()};
+			model.addRow(row);
+		}
+	}
 	
 	public static void main(String[] args) {
 		new FriendFrame();
-		
-		dto=new FriendDto();
-		dao=new FriendDao();
-		System.out.println(dao.getData(2).getPhone());
 	}
 }
